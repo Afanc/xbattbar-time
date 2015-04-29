@@ -594,7 +594,7 @@ void battery_check(void)
 		int i=7;
 		while ((time_remaining_buffer[i] != 'm') && (i != 0))
 		{
-		    time_remaining_buffer[i] = ' ';
+		    time_remaining_buffer[i] = '\0';
 		    i--;
 		    fprintf(stderr, "does it crash here? %ld",sizeof(time_remaining_buffer));
 		}
