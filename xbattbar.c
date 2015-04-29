@@ -590,11 +590,13 @@ void battery_check(void)
 
 		time += strlen(TIME_STRING);
 		strncpy(time_remaining_buffer, time, sizeof(time_remaining_buffer)); 		// if shit happens, it happens here
+		time_remaining_buffer[8] = '\0';
 		int i=7;
-		while (time_remaining_buffer[i] != 'm')
+		while ((time_remaining_buffer[i] != 'm') && (i != 0))
 		{
-		    time_remaining_buffer[i] = '\0';
+		    time_remaining_buffer[i] = ' ';
 		    i--;
+		    fprintf(stderr, "does it crash here? %ld",sizeof(time_remaining_buffer));
 		}
 
 		status = strtol(str, &end, 10);
