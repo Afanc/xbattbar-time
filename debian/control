@@ -1,0 +1,25 @@
+Source: xbattbar
+Section: x11
+Priority: optional
+Maintainer:  Dmitry E. Oboukhov <unera@debian.org>
+Build-Depends: debhelper (>> 5.0.0), libx11-dev
+Standards-Version: 3.9.3
+VCS-Git: git://git.debian.org/collab-maint/xbattbar.git
+VCS-Browser: http://git.debian.org/?p=collab-maint/xbattbar.git;a=summary
+
+Package: xbattbar
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python
+Recommends: acpi
+Description: Display battery status in X11
+ Xbattbar displays the current (laptop) battery status in the X window
+ environment. Battery status is obtained through the APM interface.
+ .
+ The battery indicator of this program is very simple: a simple bar
+ at the top/bottom of your display. With its color, it indicates the
+ AC-line status (plugged in or off-line), and battery charging/remaining
+ level. Also, if the mouse cursor enters the indicator window, a popup
+ diagnosis window comes up in the center of your display showing the
+ current AC line status and battery level.
+ .
+ This package supports ACPI and APM checks for battery status.

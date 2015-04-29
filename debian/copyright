@@ -1,0 +1,33 @@
+This package was debianized by Thomas Seyrat <tomasera@debian.org> on
+Mon, 29 Apr 2002 14:37:09 +0200.
+
+The current Debian maintainer is Davide truffa <davide@catoblepa.org>
+
+It was downloaded from http://iplab.aist-nara.ac.jp/member/suguru/xbattbar.html
+It was modified by Dmitry E. Oboukhov <unera@debian.org>
+
+Upstream Author: Suguru Yamaguchi <suguru@wide.ad.jp>
+
+ Copyright (c) 1998-2001 Suguru Yamaguchi
+ Copyright (c) Dmitry E. Oboukhov <unera@debian.org>
+
+
+License:
+
+    This package is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; version 2 dated June, 1991.
+
+    This package is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this package; if not, write to the Free Software Foundation,
+    Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
+
+On Debian systems, the complete text of the GNU General Public License,
+version 2, can be found in /usr/share/common-licenses/GPL-2.
+The Debian packaging is (C) 2007, Davide Truffa <davide@catoblepa.org> and
+is licensed under the GPL, see above.

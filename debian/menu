@@ -1,0 +1,2 @@
+?package(xbattbar):needs="X11" section="Applications/System/Monitoring"\
+  title="Xbattbar" command="/usr/bin/xbattbar"

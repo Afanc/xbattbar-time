@@ -1,0 +1,87 @@
+xbattbar (1.4.5-1) unstable; urgency=medium
+
+  * Fix FTBFS with Debian/kFreeBSD, closes: #743068,
+    thanks to Steven Chamberlain <steven@pyro.eu.org>.
+  * Fix compilation warnings in APM backend, closes: #731217,
+    thanks to Andrew Shadura <andrew@shadura.me>.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Wed, 30 Apr 2014 18:29:35 +0400
+
+xbattbar (1.4.4-1) unstable; urgency=low
+
+  * Add support for getting battery data from /sys/class/power_supply,
+    thanks to Elena Grandi <elena.valhalla@gmail.com> for script,
+    closes: #684491.
+  * Add option '-r' to use the script.
+  * Update manpage.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Thu, 17 Oct 2013 11:19:57 +0400
+
+xbattbar (1.4.3-1) unstable; urgency=low
+
+  * New maintainer, closes: #524997, #526834;
+  * Upstream version has been incremented.
+  * Upstream make system was rewritten.
+  * Added ACPI support for xbattbar.
+  * Fixed description, closes: #517682.
+  * Unnecessary dependencies have been dropped.
+  * Manpage has been updated.
+  * Standards-Version has been bumped to 3.8.1.
+  * GIT-repo has been created on git.debian.org.
+
+ -- Dmitry E. Oboukhov <unera@debian.org>  Mon, 04 May 2009 09:04:05 +0400
+
+xbattbar (1.4.2-5.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * debian/control:
+    + Add libxext-dev to Build-Depends (Closes: #449121).
+  * debian/menu:
+    + Update to the new menu policy (Closes: #485762).
+
+ -- Marco Rodrigues <gothicx@sapo.pt>  Wed, 11 Jun 2008 10:38:15 +0100
+
+xbattbar (1.4.2-5) unstable; urgency=low
+
+  * New Maintainer (Closes: #366524)
+  * Added references to xbattbar-acpi (Closes: #430609)
+
+ -- Davide Truffa <davide@catoblepa.org>  Sun, 01 Jul 2007 18:15:54 +0200
+
+xbattbar (1.4.2-4) unstable; urgency=high
+
+  * Build-depend on xutils-dev for the X11R7 transition, and adjust the
+    packaging to use the FHS paths (closes: #366400)
+  * Bumped Standards-Version to 3.7.2
+  * Bumped debhelper compatibility level to 4.0.0
+
+ -- Thomas Seyrat <tomasera@debian.org>  Mon,  8 May 2006 17:32:44 +0200
+
+xbattbar (1.4.2-3.1) unstable; urgency=low
+
+  * Non-maintainer upload.
+  * Remove Build-Dependency on xlibs-dev (Closes: #346759).
+  * Credit and Big Thanks to Nico Golde <nico@ngolde.de> for the patch and
+    testing.
+
+ -- Amaya Rodrigo Sastre <amaya@debian.org>  Wed, 18 Jan 2006 16:25:54 +0100
+
+xbattbar (1.4.2-3) unstable; urgency=low
+
+  * Improved description (thanks to Martin Schulze) (closes: #146973)
+  * Previous upload closes: #146517, #146538
+
+ -- Thomas Seyrat <tomasera@debian.org>  Tue, 14 May 2002 21:12:13 +0200
+
+xbattbar (1.4.2-2) unstable; urgency=low
+
+  * Added missing build dependency on xlibs-dev. 
+
+ -- Thomas Seyrat <tomasera@debian.org>  Mon, 13 May 2002 20:38:14 +0200
+
+xbattbar (1.4.2-1) unstable; urgency=low
+
+  * Initial Release. (closes: #144739)
+
+ -- Thomas Seyrat <tomasera@debian.org>  Wed,  1 May 2002 18:10:15 +0200
+
