@@ -1,3 +1,18 @@
+RELEASE NOTES ++ 					April - 29 - 2015
+small changes to the original software
+for my very personal use - check the code since it won't do what you expect him to do
+very badly written, feel free to improve
+usable with the '-c' option only
+
+what changes ?
+- the perl xbattbar-check-acpi script
+    - fitted for two batteries, the second one being twice as efficient. Check the code ! There is a "total = 1*battery1 + 2*battery2"
+    - if running on internal battery, information ("!") given
+- the c xbattbar.c code
+    - added global variable
+    - changed information popup (removed ac information, added remaining_time)
+some lines where only commented out instead of completely removed
+
 RELEASE NOTES						Febraury-2-2001
 
 Suguru Yamaguchi <suguru@wide.ad.jp>
