@@ -25,9 +25,27 @@ my $acpi;
 
 die "Can not start acpi: $!\n" unless open $acpi, '-|', 'acpi', '-b', '-a';
 
-my @acpi = <$acpi>;
+my $cells = 0;
+my $sysclass='/sys/class/power_supply/BAT1/serial_number';
+if (-e $sysclass)
+{
+    open my $read, "<", $sysclass or die "can not open /sys/class/...";
+    while (<$read>)
+    {
+	if ($_ == '22312')
+	{
+	    $cells = 6;
+	}
+	elsif ($_ == ' 7650')
+	{
+	    $cells = 3;
+	}
+    }
 
-#print $acpi[0];
+#print $cells."\n";
+}
+
+my @acpi = <$acpi>;
 
 my $remaining = 0;
 
@@ -50,7 +68,7 @@ if ($acpi[0] =~ /(\d\d):(\d\d):(\d\d)/)
    $remaining ="- "."$hours"."$minutes";
 }
 
-if ($acpi[1] =~ /(\d\d):(\d\d):(\d\d)/)
+if ($acpi[1] =~ /(\d\d):(\d\d):(\d\d)/ or scalar(@acpi)==2)
 {
     my $hours = $1;
     my $minutes = $2;
@@ -86,7 +104,18 @@ die "Can not get battery level\n" unless @battery;
 
 my $battery = 0;
 #$battery += $_ for @battery;
-$battery = ($battery[0] + $battery[1]/2)*(2/3);
+if ($cells == '6')
+{
+    $battery = ($battery[0] + $battery[1]/2)*(2/3);
+}
+elsif ($cells == '3')
+{
+    $battery = ($battery[0] + $battery[1])/2;
+}
+else
+{
+    $battery = $battery[0];
+}
 #$battery /= @battery;
 
 

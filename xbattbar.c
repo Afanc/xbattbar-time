@@ -596,7 +596,7 @@ void battery_check(void)
 		{
 		    time_remaining_buffer[i] = '\0';
 		    i--;
-		    fprintf(stderr, "does it crash here? %ld",sizeof(time_remaining_buffer));
+		    //fprintf(stderr, "does it crash here? %ld",sizeof(time_remaining_buffer));
 		}
 
 		status = strtol(str, &end, 10);
